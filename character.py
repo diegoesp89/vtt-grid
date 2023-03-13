@@ -29,8 +29,10 @@ class Character:
     xp = 0
     level = 0
     magic_skill = ""
+    pos_x = 0
+    pos_y = 0
 
-    def __init__(self, name, strength, dexterity, constitution, intelligence, wisdom, hp, ac, speed, conditions, skills, spells, items, feats, languages, proficiencies, xp, level, char_class, subclass, strength_save, dexterity_save, constitution_save, intelligence_save, wisdom_save, charisma_save, magic_skill):
+    def __init__(self, name, strength, dexterity, constitution, intelligence, wisdom, hp, ac, speed, conditions, skills, spells, items, feats, languages, proficiencies, xp, level, char_class, subclass, strength_save, dexterity_save, constitution_save, intelligence_save, wisdom_save, charisma_save, magic_skill, pos_x, pos_y):
         self.name = name or "Player"
         self.strength = strength or 10
         self.dexterity = dexterity or 10
@@ -59,4 +61,6 @@ class Character:
         self.wisdom_save = wisdom_save or 0
         self.charisma_save = charisma_save or 0
         self.magic_skill = magic_skill or "intelligence"
+        self.pos_x = pos_x or 0
+        self.pos_y = pos_y or 0
     

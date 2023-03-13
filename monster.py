@@ -44,8 +44,10 @@ class Monster:
     document__slug = ""
     document__title = ""
     document__license_url = ""
+    pos_x = 0
+    pos_y = 0
 
-    def __init__(self, slug, name, size, type, subtype, group, alignment, armor_class, armor_desc, hit_points, max_hit_points, hit_dice, speed, strength, dexterity, constitution, intelligence, wisdom, charisma, strength_save, dexterity_save, constitution_save, intelligence_save, wisdom_save, charisma_save, perception, skills, damage_vulnerabilities, damage_resistances, damage_immunities, condition_immunities, senses, languages, challenge_rating, cr, actions, reactions, legendary_desc, legendary_actions, special_abilities, spell_list, img_main, document__slug, document__title, document__license_url):
+    def __init__(self, slug, name, size, type, subtype, group, alignment, armor_class, armor_desc, hit_points, max_hit_points, hit_dice, speed, strength, dexterity, constitution, intelligence, wisdom, charisma, strength_save, dexterity_save, constitution_save, intelligence_save, wisdom_save, charisma_save, perception, skills, damage_vulnerabilities, damage_resistances, damage_immunities, condition_immunities, senses, languages, challenge_rating, cr, actions, reactions, legendary_desc, legendary_actions, special_abilities, spell_list, img_main, document__slug, document__title, document__license_url, pos_x, pos_y):
         self.slug = slug or ""
         self.name = name or ""
         self.size = size or ""
@@ -91,6 +93,8 @@ class Monster:
         self.document__slug = document__slug or ""
         self.document__title = document__title or ""
         self.document__license_url = document__license_url or ""
+        self.pos_x = pos_x or 0
+        self.pos_y = pos_y or 0
 
     def hurt(self, damage):
         self.hit_points -= damage
